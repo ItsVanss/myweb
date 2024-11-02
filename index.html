@@ -148,89 +148,30 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about_section layout_padding fade-in-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail_box">
-            <div class="heading_container">
-              <h2>More About Me :)</h2>
-              <img src="images/plug.png" alt="Plug Icon">
-            </div>
-            <p>I am skilled in creating simple yet visually appealing websites with efficient functionality...</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img_container">
-            <div class="img-box b1">
-              <img src="images/abouts-img1.jpg" alt="About Image 1">
-            </div>
-            <div class="img-box b2">
-              <img src="images/abouts-img2.jpg" alt="About Image 2">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="blog_section layout_padding fade-in-section">
-    <div class="container">
-      <div class="heading_container">
-        <h2>Blog</h2>
-        <img src="images/plug.png" alt="Plug Icon">
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/blog1.jpg" alt="Blog Image 1">
-            </div>
-            <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/blog2.jpg" alt="Blog Image 2">
-            </div>
-            <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- jQuery and Bootstrap Scripts -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <!-- Script for Fade-In Effect on Scroll -->
+  <!-- IntersectionObserver Script for Fade-In Effect -->
   <script>
-    $(document).ready(function () {
-      function fadeInOnScroll() {
-        $('.fade-in-section').each(function () {
-          const sectionTop = $(this).offset().top;
-          const scrollTop = $(window).scrollTop();
-          const windowHeight = $(window).height();
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInSections = document.querySelectorAll(".fade-in-section");
 
-          if (scrollTop > sectionTop - windowHeight + 100) {
-            $(this).addClass('visible');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");  // Removes visibility when out of view
           }
         });
-      }
+      }, {
+        threshold: 0.1  // Trigger when 10% of the element is visible
+      });
 
-      // Run on page load and on scroll
-      fadeInOnScroll();
-      $(window).on('scroll', fadeInOnScroll);
+      fadeInSections.forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </body>
