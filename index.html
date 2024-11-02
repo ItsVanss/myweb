@@ -1,59 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <!-- Basic Meta -->
+  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
   <title>Vanss</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
-  <!-- Custom CSS for fade-in effect -->
-  <style>
-    .fade-in-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Tambahkan CSS ini di bagian <head> -->
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Tambahkan ini untuk memastikan elemen kembali ke keadaan awal */
+  .fade-in.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   </style>
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- Header Section -->
+    <!-- header section strats -->
     <header class="header_section">
       <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo">
-            <span>Vanss</span>
+            <img src="images/logo.png" alt="">
+            <span>
+              Vanss
+            </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="s-1"></span>
-            <span class="s-2"></span>
-            <span class="s-3"></span>
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="about.html"> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html">More</a>
+                  <a class="nav-link" href="service.html"> More </a>
                 </li>
               </ul>
             </div>
@@ -61,16 +85,23 @@
         </nav>
       </div>
     </header>
-    
-    <!-- Slider Section -->
-    <section class="slider_section fade-in-section">
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="detail_box">
-              <h1>Cavan Rizal <br>Aditya Ramadhan</h1>
-              <p>A first-semester student at Politeknik Kesehatan Kementrian Kesehatan Surabaya, majoring in Electromedical Engineering Technology.</p>
-              <a href="#" class="">Contact Us</a>
+              <h1>
+                Cavan Rizal <br>
+                Aditya Ramadhan <br>
+              </h1>
+              <p>
+                A first-semester student at Politeknik Kesehatan Kementrian Kesehatan Surabaya, majoring in Electromedical Engineering Technology
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpiw3ONlBwEKqA8lXLnwy3NL_yo7zNsBIbDzkYsLTviy4ssg/viewform " class="">
+                Contact Us
+              </a>
             </div>
           </div>
           <div class="col-lg-5 col-md-6 offset-lg-1">
@@ -80,17 +111,17 @@
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <div class="img-box">
-                        <img src="images/slider-imgs.jpg" alt="Image 1">
+                        <img src="images/slider-imgs.jpg" alt="">
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="img-box">
-                        <img src="images/slider2-imgs.jpg" alt="Image 2">
+                        <img src="images/slider2-imgs.jpg" alt="">
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="img-box">
-                        <img src="images/slider3-imgs.jpg" alt="Image 3">
+                        <img src="images/slider3-imgs.jpg" alt="">
                       </div>
                     </div>
                   </div>
@@ -107,131 +138,259 @@
         </div>
       </div>
     </section>
+    <!-- end slider section -->
   </div>
 
-  <!-- Service Section -->
-  <section class="service_section layout_padding fade-in-section">
+  <!-- service section -->
+  <section class="service_section layout_padding">
     <div class="container">
       <div class="heading_container">
-        <h2>About Me</h2>
-        <img src="images/plug.png" alt="Plug Icon">
+        <h2>
+          About Me
+        </h2>
+        <img src="images/plug.png" alt="">
       </div>
+
       <div class="service_container">
         <div class="box">
           <div class="img-box">
-            <img src="images/s1.png" alt="Hobby Icon">
+            <img src="images/s1.png" class="img1" alt="">
           </div>
           <div class="detail-box">
-            <h5>Hobby</h5>
-            <p>I have a variety of hobbies, including playing games like Genshin Impact and Mobile Legends, reading novels and philosophy books, and creating new things.</p>
+            <h5>
+              Hobby
+            </h5>
+            <p>
+              I have a variety of hobbies, including playing games like Genshin Impact and Mobile Legends, reading novels and philosophy books, and creating new things.
+            </p>
           </div>
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/s4.png" alt="Like Icon">
+            <img src="images/s4.png" class="img1" alt="">
           </div>
           <div class="detail-box">
-            <h5>What I Like?</h5>
-            <p>I have a passion for technology and computers, and I enjoy creating new things, ranging from websites to devices.</p>
+            <h5>
+              What i Like?
+            </h5>
+            <p>
+              I have a passion for technology and computers, and I enjoy creating new things, ranging from websites to devices
+            </p>
           </div>
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/s5.png" alt="Dislike Icon">
+            <img src="images/s5.png" class="img1" alt="">
           </div>
           <div class="detail-box">
-            <h5>My Big No!</h5>
-            <p>I have an aversion to cockroaches, traffic congestion, carrot juice, and Cleo brand bottled water.</p>
+            <h5>
+              My big No!
+            </h5>
+            <p>
+              I have an aversion to cockroaches, traffic congestion, carrot juice, and Cleo brand bottled water.
+            </p>
           </div>
         </div>
       </div>
+      <div class="btn-box">
+        <a href="">
+          Read More
+        </a>
+      </div>
     </div>
   </section>
+  <!-- end service section -->
 
-  <!-- About Section -->
-  <section class="about_section layout_padding fade-in-section">
+  <!-- about section -->
+  <section class="about_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="detail_box">
+          <div class="detail-box">
             <div class="heading_container">
-              <h2>More About Me :)</h2>
-              <img src="images/plug.png" alt="Plug Icon">
+              <h2>
+                More About Me:)
+              </h2>
+              <img src="images/plug.png" alt="">
             </div>
-            <p>I am skilled in creating simple yet visually appealing websites with efficient functionality...</p>
+            <p>
+              I am skilled in creating simple yet visually appealing websites with efficient functionality. With a strong understanding of HTML, CSS, and the fundamentals of JavaScript, I can develop responsive and user-friendly web pages tailored to meet specific needs. Additionally, I am proficient in connecting forms and other website elements to third-party services, such as email integration, map displays, and social media integration. I enjoy combining creativity and logic to produce websites that are straightforward yet effective for users.
+            </p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="img_container">
             <div class="img-box b1">
-              <img src="images/abouts-img1.jpg" alt="About Image 1">
+              <img src="images/abouts-img1.jpg" alt="" />
             </div>
             <div class="img-box b2">
-              <img src="images/abouts-img2.jpg" alt="About Image 2">
+              <img src="images/abouts-img2.jpg" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- end about section -->
 
-  <!-- Blog Section -->
-  <section class="blog_section layout_padding fade-in-section">
+  <!-- blog section -->
+  <section class="blog_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>Blog</h2>
-        <img src="images/plug.png" alt="Plug Icon">
+        <img src="images/plug.png" alt="">
       </div>
       <div class="row">
+        <div class="overlay">
+          <div class="overlay_text">Coming Soon</div>
+        </div>
+        
         <div class="col-md-6">
           <div class="box">
             <div class="img-box">
-              <img src="images/blog1.jpg" alt="Blog Image 1">
+              <img src="images/nahida.jpeg" alt="">
             </div>
             <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority...</p>
+              <h5>My World</h5>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.
+              </p>
             </div>
           </div>
         </div>
+        
         <div class="col-md-6">
           <div class="box">
             <div class="img-box">
-              <img src="images/blog2.jpg" alt="Blog Image 2">
+              <img src="images/nahida3.jpeg" alt="">
             </div>
             <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority...</p>
+              <h5>My Girlfriend</h5>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- end blog section -->
 
-  <!-- jQuery and Bootstrap Scripts -->
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_contact">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="">
+              <img src="images/location-white.png" alt="">
+              <span>
+                On My Way!
+              </span>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="">
+              <img src="images/telephone-white.png" alt="">
+              <span>
+                Call : +62 XXX XXXX XXXX
+              </span>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="">
+              <img src="images/envelope-white.png" alt="">
+              <span>
+                cavanrzlar@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-lg-9">
+          <div class="info_form">
+            <form action="">
+              <input type="text" placeholder="Enter your email">
+              <button>
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="info_social">
+            <div>
+              <a href="https://x.com/cavanrzlar?t=d_oFUqCCdKQJxulFqsAgjQ&s=09&mx=2">
+                <img src="images/twitter.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/cvnrzlar?igsh=MXF3Z2tmNWllZGk1ZQ== ">
+                <img src="images/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-9 mx-auto">
+          <p>
+            &copy; 2024 All Rights Reserved By
+            <a href="https://html.design/">Vanss.id</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- Scripts -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <!-- Script for Fade-In Effect on Scroll -->
-  <script>
-    $(document).ready(function () {
-      function fadeInOnScroll() {
-        $('.fade-in-section').each(function () {
-          const sectionTop = $(this).offset().top;
-          const scrollTop = $(window).scrollTop();
-          const windowHeight = $(window).height();
-
-          if (scrollTop > sectionTop - windowHeight + 100) {
-            $(this).addClass('visible');
-          }
-        });
+  <!-- Animation Script -->
+  <!-- Ganti script animasi di bagian akhir body dengan yang ini -->
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('hidden');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('hidden');
       }
-
-      // Run on page load and on scroll
-      fadeInOnScroll();
-      $(window).on('scroll', fadeInOnScroll);
     });
+  }, observerOptions);
+  
+  // Tunggu sampai DOM selesai dimuat
+  document.addEventListener('DOMContentLoaded', function() {
+    // Pilih semua elemen yang akan dianimasikan
+    const animatedElements = document.querySelectorAll('section, .box, .detail-box, .img-box');
+    
+    // Tambahkan kelas fade-in dan mulai observe setiap elemen
+    animatedElements.forEach(element => {
+      element.classList.add('fade-in');
+      element.classList.add('hidden'); // Tambahkan kelas hidden di awal
+      observer.observe(element);
+    });
+  });
   </script>
+
 </body>
 </html>
