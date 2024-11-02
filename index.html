@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -27,10 +26,30 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Tambahkan CSS ini di bagian <head> -->
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Tambahkan ini untuk memastikan elemen kembali ke keadaan awal */
+  .fade-in.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  </style>
 </head>
 
 <body>
-
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -68,19 +87,21 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section ">
+    <section class="slider_section">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 ">
+          <div class="col-md-6">
             <div class="detail_box">
               <h1>
                 Cavan Rizal <br>
                 Aditya Ramadhan <br>
               </h1>
               <p>
-                A first-semester student at Politeknik Kesehatan Kementrian Kesehatan Surabaya, majoring in Electromedical Engineering Technology            </p>
-              <a href="" class="">
+                A first-semester student at Politeknik Kesehatan Kementrian Kesehatan Surabaya, majoring in Electromedical Engineering Technology
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpiw3ONlBwEKqA8lXLnwy3NL_yo7zNsBIbDzkYsLTviy4ssg/viewform " class="">
                 Contact Us
+              </a>
             </div>
           </div>
           <div class="col-lg-5 col-md-6 offset-lg-1">
@@ -113,14 +134,12 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-
           </div>
         </div>
       </div>
     </section>
     <!-- end slider section -->
   </div>
-
 
   <!-- service section -->
   <section class="service_section layout_padding">
@@ -142,37 +161,11 @@
               Hobby
             </h5>
             <p>
-                I have a variety of hobbies, including playing games like Genshin Impact and Mobile Legends, reading novels and philosophy books, and creating new things.
+              I have a variety of hobbies, including playing games like Genshin Impact and Mobile Legends, reading novels and philosophy books, and creating new things.
             </p>
           </div>
         </div>
-        <!-- <div class="box active">
-          <div class="img-box">
-            <img src="images/s2.png" class="img1" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Windmill Energy
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-        </div> -->
-        <!-- <div class="box">
-          <div class="img-box">
-            <img src="images/s3.png" class="img1" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Equipment Maintenance
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-        </div> -->
-        <div class="box ">
+        <div class="box">
           <div class="img-box">
             <img src="images/s4.png" class="img1" alt="">
           </div>
@@ -181,7 +174,8 @@
               What i Like?
             </h5>
             <p>
-                I have a passion for technology and computers, and I enjoy creating new things, ranging from websites to devices            </p>
+              I have a passion for technology and computers, and I enjoy creating new things, ranging from websites to devices
+            </p>
           </div>
         </div>
         <div class="box">
@@ -193,7 +187,8 @@
               My big No!
             </h5>
             <p>
-                "I have an aversion to cockroaches, traffic congestion, carrot juice, and Cleo brand bottled water.            </p>
+              I have an aversion to cockroaches, traffic congestion, carrot juice, and Cleo brand bottled water.
+            </p>
           </div>
         </div>
       </div>
@@ -219,10 +214,8 @@
               <img src="images/plug.png" alt="">
             </div>
             <p>
-                I am skilled in creating simple yet visually appealing websites with efficient functionality. With a strong understanding of HTML, CSS, and the fundamentals of JavaScript, I can develop responsive and user-friendly web pages tailored to meet specific needs. Additionally, I am proficient in connecting forms and other website elements to third-party services, such as email integration, map displays, and social media integration. I enjoy combining creativity and logic to produce websites that are straightforward yet effective for users.            </p>
-            <!-- <a href="">
-              Read More
-            </a> -->
+              I am skilled in creating simple yet visually appealing websites with efficient functionality. With a strong understanding of HTML, CSS, and the fundamentals of JavaScript, I can develop responsive and user-friendly web pages tailored to meet specific needs. Additionally, I am proficient in connecting forms and other website elements to third-party services, such as email integration, map displays, and social media integration. I enjoy combining creativity and logic to produce websites that are straightforward yet effective for users.
+            </p>
           </div>
         </div>
         <div class="col-md-6">
@@ -234,20 +227,13 @@
               <img src="images/abouts-img2.jpg" alt="" />
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
-
   <!-- end about section -->
 
-
-
-
   <!-- blog section -->
-
   <section class="blog_section layout_padding">
     <div class="container">
       <div class="heading_container">
@@ -255,7 +241,6 @@
         <img src="images/plug.png" alt="">
       </div>
       <div class="row">
-        <!-- Overlay Section -->
         <div class="overlay">
           <div class="overlay_text">Coming Soon</div>
         </div>
@@ -263,10 +248,10 @@
         <div class="col-md-6">
           <div class="box">
             <div class="img-box">
-              <img src="images/blog1.jpg" alt="">
+              <img src="images/nahida.jpeg" alt="">
             </div>
             <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
+              <h5>My World</h5>
               <p>
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.
               </p>
@@ -277,10 +262,10 @@
         <div class="col-md-6">
           <div class="box">
             <div class="img-box">
-              <img src="images/blog2.jpg" alt="">
+              <img src="images/nahida3.jpeg" alt="">
             </div>
             <div class="detail-box">
-              <h5>Blog Title Goes Here</h5>
+              <h5>My Girlfriend</h5>
               <p>
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.
               </p>
@@ -290,62 +275,9 @@
       </div>
     </div>
   </section>
-  
-
   <!-- end blog section -->
 
-
-
-  <!-- contact section -->
-
-  <!-- <section class="contact_section layout_padding">
-    <div class="container ">
-      <div class="heading_container">
-        <h2>
-          Contact Us
-        </h2>
-        <img src="images/plug.png" alt="">
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- end contact section -->
-
-
   <!-- info section -->
-
   <section class="info_section layout_padding">
     <div class="container">
       <div class="info_contact">
@@ -389,24 +321,21 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="info_social">
-            
             <div>
-              <a href="">
+              <a href="https://x.com/cavanrzlar?t=d_oFUqCCdKQJxulFqsAgjQ&s=09&mx=2">
                 <img src="images/twitter.png" alt="">
               </a>
             </div>
             <div>
-              <a href="">
+              <a href="https://www.instagram.com/cvnrzlar?igsh=MXF3Z2tmNWllZGk1ZQ== ">
                 <img src="images/instagram.png" alt="">
               </a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
   <!-- end info section -->
 
   <!-- footer section -->
@@ -424,10 +353,44 @@
   </footer>
   <!-- footer section -->
 
-
+  <!-- Scripts -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
-</body>
+  <!-- Animation Script -->
+  <!-- Ganti script animasi di bagian akhir body dengan yang ini -->
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('hidden');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('hidden');
+      }
+    });
+  }, observerOptions);
+  
+  // Tunggu sampai DOM selesai dimuat
+  document.addEventListener('DOMContentLoaded', function() {
+    // Pilih semua elemen yang akan dianimasikan
+    const animatedElements = document.querySelectorAll('section, .box, .detail-box, .img-box');
+    
+    // Tambahkan kelas fade-in dan mulai observe setiap elemen
+    animatedElements.forEach(element => {
+      element.classList.add('fade-in');
+      element.classList.add('hidden'); // Tambahkan kelas hidden di awal
+      observer.observe(element);
+    });
+  });
+  </script>
 
+</body>
 </html>
